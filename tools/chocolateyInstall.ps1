@@ -11,7 +11,8 @@ try {
 	choco $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
  	#Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
 	
-	Write-ChocolateySuccess $packageName
+	Write-Output $packageName
+ 	#Write-ChocolateySuccess $packageName
 	
 } catch {
 	#Write-ChocolateyFailure $packageName $($_.Exception.Message)
