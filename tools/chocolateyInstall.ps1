@@ -8,7 +8,8 @@ $validExitCodes = @(0) #please insert other valid exit codes here, exit codes fo
 
 try {
 
-	Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
+	choco $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
+ 	Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
 	
 	Write-ChocolateySuccess $packageName
 	
